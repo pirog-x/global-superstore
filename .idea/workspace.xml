@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90f34ca8-fc76-4253-b0c8-0ae8d99a6115" name="Changes" comment="add PostRequest to /submitItem">
+    <list default="true" id="90f34ca8-fc76-4253-b0c8-0ae8d99a6115" name="Changes" comment="rename TestController.java to FormController.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/FormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/pojoClases/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/pojoClases/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/inventory.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/inventory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/inventory.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/inventory.html" afterDir="false" />
     </list>
@@ -49,6 +49,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -61,6 +62,9 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
     &quot;settings.editor.splitter.proportion&quot;: &quot;0.28266665&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;1ee348fa5ae340fd3c3643f7ae49fe04&quot;,
@@ -107,7 +111,9 @@
       <workItem from="1674117867571" duration="2248000" />
       <workItem from="1674139425827" duration="2532000" />
       <workItem from="1674201253777" duration="525000" />
-      <workItem from="1674202002291" duration="1700000" />
+      <workItem from="1674202002291" duration="6617000" />
+      <workItem from="1674208877411" duration="1855000" />
+      <workItem from="1674210888561" duration="1126000" />
     </task>
     <task id="LOCAL-00001" summary="init commit and add controller to src/controller add /src/main/resources/templates">
       <created>1674032458826</created>
@@ -123,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674118199069</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add data from the POST request (/submitItem) to inventory.html">
+      <created>1674203972986</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674203972986</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,50 +145,56 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit and add controller to src/controller add /src/main/resources/templates" />
     <MESSAGE value="add PostRequest to /submitItem" />
-    <option name="LAST_COMMIT_MESSAGE" value="add PostRequest to /submitItem" />
+    <MESSAGE value="add data from the POST request (/submitItem) to inventory.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="add data from the POST request (/submitItem) to inventory.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/TestController.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/TestController.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/TestController.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/pojoClases/Item.java</url>
-          <line>30</line>
+          <line>41</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/pojoClases/Item.java</url>
-          <line>38</line>
+          <line>49</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/pojoClases/Item.java</url>
-          <line>46</line>
+          <line>57</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/pojoClases/Item.java</url>
-          <line>62</line>
+          <line>73</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/pojoClases/Item.java</url>
-          <line>54</line>
+          <line>65</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/FormController.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/FormController.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/FormController.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/FormController.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

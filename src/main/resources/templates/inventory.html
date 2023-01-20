@@ -1,4 +1,4 @@
-<html >
+<html>
     <head>
         <title>inventory</title>
         <link th:href="@{/inventory-stylesheet.css}" rel="stylesheet"> 
@@ -8,7 +8,7 @@
             <a  th:href="@{/}" >Form</a>
             <a class="active" th:href="@{/inventory}">Inventory</a>
         </div>
-   
+
         <div class="container">
            <table>
               <tr class="head">
@@ -26,7 +26,7 @@
                  <td th:text="${#numbers.formatCurrency(item.discount)}"></td>
                  <td  type="date" th:text="${#dates.format(item.date, 'dd-MM-yyyy')}"></td>
                  <td>
-                    <a role="button" style="color:white; background-color: #263238" class="table-button">Update</a>
+                    <a role="button" style="color:white; background-color: #263238" class="table-button" th:href="@{/(id = ${item.id})}">Update</a>
                  </td>
               </tr>
            </table>
