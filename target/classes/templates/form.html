@@ -1,6 +1,6 @@
-<html >
 <html>
     <head>
+        <title>form</title>
         <link th:href="@{/form-stylesheet.css}" rel="stylesheet">
     </head>
     <body>
@@ -13,7 +13,7 @@
             <form method="post" th:object="${item}" th:action="@{/submitItem}">
                 <select class="select" th:field="*{category}">
                     <option style="color:blue" value="">Choose Category</option>
-                    <option  th:each="category: ${categories}" th:text="${category}" th:value="${category}"></option>
+                    <option th:each="category: ${categories}" th:text="${category}" th:value="${category}"></option>
                 </select>
                 <input type="text" placeholder="Name" th:field="*{name}">
                 <input class="half" type="text" placeholder="Price" th:field="*{price}">
