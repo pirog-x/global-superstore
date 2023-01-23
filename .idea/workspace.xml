@@ -7,11 +7,8 @@
     <list default="true" id="90f34ca8-fc76-4253-b0c8-0ae8d99a6115" name="Changes" comment="rename TestController.java to FormController.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/FormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/pojoClases/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/pojoClases/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/FormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/FormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/inventory.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/inventory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/inventory.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/inventory.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,6 +111,7 @@
       <workItem from="1674202002291" duration="6617000" />
       <workItem from="1674208877411" duration="1855000" />
       <workItem from="1674210888561" duration="1126000" />
+      <workItem from="1674481265534" duration="2743000" />
     </task>
     <task id="LOCAL-00001" summary="init commit and add controller to src/controller add /src/main/resources/templates">
       <created>1674032458826</created>
@@ -178,25 +176,20 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/FormController.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/FormController.java</url>
-          <line>24</line>
+          <line>27</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/FormController.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/FormController.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="14" />
+          <line>33</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.util.LinkedHashMap$Entry" memberName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

@@ -7,9 +7,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 
 @Controller
@@ -33,13 +36,19 @@ public class FormController {
     }
 
     @PostMapping("/submitItem")
-    public String submitItemHandler(Item item) {
-
+    public String submitItemHandler(Item item, RedirectAttributes redirectAttributes) {
         int index = getItemIndex(item.getId());
+
         if (index == Constants.NOT_FOUND) {
             items.add(item);
+            redirectAttributes.addFlashAttribute("status", Constants.SUCCESS_STATUS);
         } else {
-            items.set(index, item);
+            if (withinFiveDays(item.getDate(), items.get(index).getDate())) {
+                redirectAttributes.addFlashAttribute("status", Constants.SUCCESS_STATUS);
+                items.set(index, item);
+            } else {
+                redirectAttributes.addFlashAttribute("status", Constants.FAILED_STATUS);
+            }
         }
         return "redirect:/inventory";
     }
@@ -49,5 +58,10 @@ public class FormController {
             if (items.get(i).getId().equals(id)) return i;
         }
         return Constants.NOT_FOUND;
+    }
+
+    private boolean withinFiveDays(Date newDate, Date oldDate) {
+        long diff = newDate.getTime() - oldDate.getTime();
+        return TimeUnit.MILLISECONDS.toDays(diff) <= 5;
     }
 }
