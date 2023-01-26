@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90f34ca8-fc76-4253-b0c8-0ae8d99a6115" name="Changes" comment="fix &quot;blank price and discount&quot; field enter">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/service/FormService.java" afterDir="false" />
+    <list default="true" id="90f34ca8-fc76-4253-b0c8-0ae8d99a6115" name="Changes" comment="change project structure into three layer codebase">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controller/FormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controller/FormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/service/FormService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/service/FormService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +113,7 @@
       <workItem from="1674636147264" duration="5171000" />
       <workItem from="1674643895878" duration="421000" />
       <workItem from="1674717671667" duration="745000" />
-      <workItem from="1674718430070" duration="8665000" />
+      <workItem from="1674718430070" duration="9166000" />
     </task>
     <task id="LOCAL-00001" summary="init commit and add controller to src/controller add /src/main/resources/templates">
       <created>1674032458826</created>
@@ -157,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674721487211</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="change project structure into three layer codebase">
+      <created>1674727403171</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674727403171</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +177,8 @@
     <MESSAGE value="add check for update item, if item.data &lt;= 5 days&#10;&#10;add status floating window to inventory.html" />
     <MESSAGE value="add field validation" />
     <MESSAGE value="fix &quot;blank price and discount&quot; field enter" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix &quot;blank price and discount&quot; field enter" />
+    <MESSAGE value="change project structure into three layer codebase" />
+    <option name="LAST_COMMIT_MESSAGE" value="change project structure into three layer codebase" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -244,11 +252,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/pojoClases/Item.java</url>
           <line>87</line>
           <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controller/FormController.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

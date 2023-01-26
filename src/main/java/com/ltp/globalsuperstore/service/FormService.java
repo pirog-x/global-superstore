@@ -71,4 +71,10 @@ public class FormService {
     public void addItem(Item item) {
         formRepository.addItem(item);
     }
+
+    public boolean isValidItemDate(Item item) {
+        if (item == null) return false;
+        if (item.getDate() == null) return false;
+        return true;
+    }
 }

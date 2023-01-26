@@ -21,7 +21,6 @@ public class FormController {
     @GetMapping("/")
     public String getForm(Model model, @RequestParam(required = false) String id) {
         model.addAttribute("item", formService.getItemById(id));
-        model.addAttribute("items", formService.getItems());
         return "form";
     }
 
@@ -40,6 +39,8 @@ public class FormController {
             result.rejectValue("discount", "", "Field cannot be empty");
         if (!formService.priceIsBiggerThanDiscount(item))
             result.rejectValue("price", "", "Price cannot be less than discount");
+        if (!formService.isValidItemDate(item))
+            result.rejectValue("date", "", "Field cannot be empty");
 
         if (result.hasErrors()) return "form";
 
@@ -47,5 +48,4 @@ public class FormController {
 
         return "redirect:/inventory";
     }
-
 }
