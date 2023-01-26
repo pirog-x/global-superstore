@@ -21,25 +21,18 @@ public class Item {
 
     @Min(value = 0, message = "Discount cannot be negative")
     private Double discount;
+    private String id;
 
     @Past(message = "Date must be in the past")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
-    private String id;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public Item() {
         this.id = UUID.randomUUID().toString();
     }
 
     public Item(String category, String name, Double price, Double discount, Date date) {
+        this.id = UUID.randomUUID().toString();
         this.category = category;
         this.name = name;
         this.price = price;
@@ -85,5 +78,13 @@ public class Item {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
