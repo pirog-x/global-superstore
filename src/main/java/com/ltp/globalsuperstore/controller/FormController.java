@@ -1,8 +1,7 @@
 package com.ltp.globalsuperstore.controller;
 
-import com.ltp.globalsuperstore.Constants;
 import com.ltp.globalsuperstore.pojoClases.Item;
-import com.ltp.globalsuperstore.repository.FormRepository;
+import com.ltp.globalsuperstore.service.FormService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -12,71 +11,41 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.validation.Valid;
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 
 @Controller
 public class FormController {
 
-    private final FormRepository formRepository = new FormRepository();
+    FormService formService = new FormService();
 
     @GetMapping("/")
     public String getForm(Model model, @RequestParam(required = false) String id) {
-        int index = getItemIndex(id);
-        model.addAttribute("item", index == Constants.NOT_FOUND ? new Item() : formRepository.getItem(index));
-        model.addAttribute("items", formRepository.getItems());
+        model.addAttribute("item", formService.getItemById(id));
+        model.addAttribute("items", formService.getItems());
         return "form";
     }
 
     @GetMapping("/inventory")
     public String getInventory(Model model) {
-        model.addAttribute("items", formRepository.getItems());
+        model.addAttribute("items", formService.getItems());
         return "inventory";
     }
 
     @PostMapping("/submitItem")
     public String submitItemHandler(@Valid Item item, BindingResult result,
                                     RedirectAttributes redirectAttributes) {
-        if (item.getPrice() == null || item.getDiscount() == null) {
-            if (item.getPrice() == null) {
-                result.rejectValue("price", "", "Field cannot be empty");
-            }
-            if (item.getDiscount() == null) {
-                result.rejectValue("discount", "", "Field cannot be empty");
-            }
-            return "form";
-        }
-        if (item.getPrice() < item.getDiscount()) {
+        if (!formService.isValidItemPrice(item))
+            result.rejectValue("price", "", "Field cannot be empty");
+        if (!formService.isValidItemDiscount(item))
+            result.rejectValue("discount", "", "Field cannot be empty");
+        if (!formService.priceIsBiggerThanDiscount(item))
             result.rejectValue("price", "", "Price cannot be less than discount");
-        }
+
         if (result.hasErrors()) return "form";
 
-        int index = getItemIndex(item.getId());
+        redirectAttributes.addFlashAttribute("status", formService.submitForm(item));
 
-        if (index == Constants.NOT_FOUND) {
-            formRepository.addItem(item);
-            redirectAttributes.addFlashAttribute("status", Constants.SUCCESS_STATUS);
-        } else {
-            if (withinFiveDays(item.getDate(), formRepository.getItem(index).getDate())) {
-                redirectAttributes.addFlashAttribute("status", Constants.SUCCESS_STATUS);
-                formRepository.setItem(index, item);
-            } else {
-                redirectAttributes.addFlashAttribute("status", Constants.FAILED_STATUS);
-            }
-        }
         return "redirect:/inventory";
     }
 
-    private Integer getItemIndex(String id) {
-        for (int i = 0; i < formRepository.getItems().size(); i++) {
-            if (formRepository.getItem(i).getId().equals(id)) return i;
-        }
-        return Constants.NOT_FOUND;
-    }
-
-    private boolean withinFiveDays(Date newDate, Date oldDate) {
-        long diff = newDate.getTime() - oldDate.getTime();
-        return TimeUnit.MILLISECONDS.toDays(diff) <= 5;
-    }
 }

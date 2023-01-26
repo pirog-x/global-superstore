@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90f34ca8-fc76-4253-b0c8-0ae8d99a6115" name="Changes" comment="fix &quot;blank price and discount&quot; field enter">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/repository/FormRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/service/FormService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controllers/FormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controller/FormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/pojoClases/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/pojoClases/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controller/FormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controller/FormController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +113,7 @@
       <workItem from="1674636147264" duration="5171000" />
       <workItem from="1674643895878" duration="421000" />
       <workItem from="1674717671667" duration="745000" />
-      <workItem from="1674718430070" duration="2521000" />
+      <workItem from="1674718430070" duration="8665000" />
     </task>
     <task id="LOCAL-00001" summary="init commit and add controller to src/controller add /src/main/resources/templates">
       <created>1674032458826</created>
@@ -152,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674640449319</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix &quot;blank price and discount&quot; field enter">
+      <created>1674721487211</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674721487211</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,28 +247,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controller/FormController.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controller/FormController.java</url>
           <line>33</line>
           <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controller/FormController.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controller/FormController.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ltp/globalsuperstore/controller/FormController.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
